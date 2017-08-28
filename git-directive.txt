@@ -24,11 +24,23 @@ git checkout name 切换到name分支
 git checkout -b name 创建name分支并切换到name分支
 git merge name 合并name分支到当前分支 将name分支和master合并 合并分支需要在master分支下面合并
 git branch -d name 删除name分支 (远程仓库分支需要手动删) 不能在当前分支删除当前分支
+git branch -D name 强行删除那么分支 用于name分支还没有合并之前
+git push origin :name 删除远程仓库的name分支
 git log --graph 查看分支合并图
 git log --graph --pretty=oneline --abbrev-commit 简化合并图信息
 git merge --no-ff -m "description" name name分支与当前分支合并，但是禁止使用快速模式 由于会生成一个新的commit记录所以要加m参数和描述
 git stash 存储当前修改不提交(用户一个分支进行到一半的时候调试bug分支存储当前修改)
-git push origin :name 删除远程仓库的name分支
+git stash list 查看存储列表
+git stash apply 恢复当前分支存储内容 stash列表内容不删除 
+git stash apply stash@{0} 恢复指定stash
+git stash drop 删除当前分支stash列表内容
+git stash drop stash@{0} 删除stash列表指定stash
+git stash pop 恢复当前分支存储内容并删除stash列表内容
+git remote 查看远程仓库信息
+git remote -v 显示详细的远程仓库信息
+git tag 查看标签
+git tag <name> 打标签(版本号)
+git tag <name> commit_id 给指定的历史打版本
 
 
 other direcitve:
