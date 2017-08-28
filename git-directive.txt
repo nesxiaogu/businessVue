@@ -38,6 +38,7 @@ git stash drop stash@{0} 删除stash列表指定stash
 git stash pop 恢复当前分支存储内容并删除stash列表内容
 git remote 查看远程仓库信息
 git remote -v 显示详细的远程仓库信息
+git remote rm origin 删除已关联的远程库名
 git tag 查看标签
 git tag <name> 打标签(版本号)
 git tag <name> commit_id 给指定的历史打版本
