@@ -28,7 +28,7 @@ git log --graph 查看分支合并图
 git log --graph --pretty=oneline --abbrev-commit 简化合并图信息
 git merge --no-ff -m "description" name name分支与当前分支合并，但是禁止使用快速模式 由于会生成一个新的commit记录所以要加m参数和描述
 git stash 存储当前修改不提交(用户一个分支进行到一半的时候调试bug分支存储当前修改)
-
+git push origin :name 删除远程仓库的name分支
 
 
 other direcitve:
