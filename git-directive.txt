@@ -1,0 +1,39 @@
+git directive:
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+git init 初始化
+git add filename 添加文件到暂存区
+git commit -m "description" 提交文件到分支
+git status 查看状态
+git diff 查看分支与暂存区的区别
+git log 查看版本日志信息
+git log --pretty=oneline 显示简洁的日志信息
+git reflog 查看所有操作日志信息
+git reset --hard HEAD^ 恢复到上一个版本 HEAD^^上两个版本 HEAD~100上100个版本
+git reset --hard commit_id 恢复到具体版本号
+git diff HEAD -- filename 查看工作区和版本库最新版本的区别 HEAD指向当前版本
+git checkout -- filename 丢弃工作区最近一次的修改 版本库里面有这个文件才能这样操作
+git reset HEAD filename 丢弃暂存区的文件(修改已经添加到暂存区，想要撤销修改先要在暂存区丢弃，然后在工作区丢失修改)
+git rm filename 从版本库删除文件(删除之后还要用 git commit指令提交到版本库)
+git remote add origin git@github.com:nesxiaogu/test.git 关联远程库 origin是自定义的远程库名 origin后面的是远程库的地址
+git push -u origin master 推送本地库内容到远程库 origin远程库名 master主分支 第一次推送加u参数作用的关联本地和远程的master分支 以后每次就不需要加
+git clone git@github.com:nesxiaogu/text.git 克隆远程库到本地(会连项目目录一起克隆) clone后面的是远程库的地址
+git branch name 创建名为name的分支
+git branch 查看所有分支 当前分支前面带 * 号
+git checkout name 切换到name分支
+git checkout -b name 创建name分支并切换到name分支
+git merge name 合并name分支到当前分支 将name分支和master合并 合并分支需要在master分支下面合并
+git branch -d name 删除name分支 (远程仓库分支需要手动删) 不能在当前分支删除当前分支
+git log --graph 查看分支合并图
+git log --graph --pretty=oneline --abbrev-commit 简化合并图信息
+git merge --no-ff -m "description" name name分支与当前分支合并，但是禁止使用快速模式 由于会生成一个新的commit记录所以要加m参数和描述
+
+
+
+
+other direcitve:
+ls 查看目录文件 不包含隐藏文件
+ls -ah 查看目录及文件 包含隐藏文件
+cat filename 参看文件内容
+rm filename 删除文件
+ssh-keygen -t rsa -C "youremail@example.com" 生成ssh秘钥
