@@ -41,6 +41,14 @@ git remote -v 显示详细的远程仓库信息
 git tag 查看标签
 git tag <name> 打标签(版本号)
 git tag <name> commit_id 给指定的历史打版本
+git show <tagname> 查看标签信息
+git tag -a <tagname> -m "description" -a指定标签名 -m 指定说明文字
+git tag -s <tagname> -m "description" 指定PGP签名标签
+git tag -d <tagname> 删除标签
+git push origin <tagname> 推送标签到远程仓库
+git push origin --tags 推送本地所有为推送的标签到远程
+git push origin :refs/tags/<tagname> 删除远程仓库的标签
+
 
 
 other direcitve:
