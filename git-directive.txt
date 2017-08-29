@@ -7,6 +7,7 @@ git commit -m "description" 提交文件到分支
 git status 查看状态
 git diff 查看分支与暂存区的区别
 git log 查看版本日志信息
+git log -l 显示最后一次提交信息
 git log --pretty=oneline 显示简洁的日志信息
 git reflog 查看所有操作日志信息
 git reset --hard HEAD^ 恢复到上一个版本 HEAD^^上两个版本 HEAD~100上100个版本
@@ -49,6 +50,22 @@ git tag -d <tagname> 删除标签
 git push origin <tagname> 推送标签到远程仓库
 git push origin --tags 推送本地所有为推送的标签到远程
 git push origin :refs/tags/<tagname> 删除远程仓库的标签
+git pull origin name 远程库分支或者版本号更新到本地
+git config --global color.ui true 改变git显示文字的颜色
+git add -f filename 强制添加忽略文件到git
+git check-ignore -v filename 检查具体被忽略的规则
+git config --global alias.st status 配置别名 敲st相当于敲status 别名控制两个单词要加引号
+
+
+
+.gitignore(设置忽略特殊文件)
+格式 #号表示注释
+# python:
+*.py[cod]
+*.so
+*.egg
+
+
 
 
 
@@ -58,3 +75,6 @@ ls -ah 查看目录及文件 包含隐藏文件
 cat filename 参看文件内容
 rm filename 删除文件
 ssh-keygen -t rsa -C "youremail@example.com" 生成ssh秘钥
+
+当前仓库git配置文件 .git/config
+用户git配置文件 /c/Users/Administrator/.gitconfig
