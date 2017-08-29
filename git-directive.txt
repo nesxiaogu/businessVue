@@ -1,6 +1,6 @@
 git directive:
-git config --global user.name "Your Name"
-git config --global user.email "email@example.com"
+git config --global user.name "Your Name" github用户名
+git config --global user.email "email@example.com" github关联邮箱
 git init 初始化
 git add filename 添加文件到暂存区
 git commit -m "description" 提交文件到分支
